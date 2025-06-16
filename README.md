@@ -22,10 +22,12 @@ A full-stack, server-side–rendered YouTube-style application built with modern
 
 ## 🏗️ Architecture Diagram
 
-\[ User ] → Next.js Web UI (React/tRPC) → tRPC API → Cloud Run
+```
+[ User ] → Next.js Web UI (React/tRPC) → tRPC API → Cloud Run
 → Upload → Firestore metadata & Cloud Storage (raw video)
 → Pub/Sub → Cloud Run transcode service (FFmpeg in Docker)
 → Cloud Storage (HLS segments & thumbnails) → Firestore metadata update
+```
 
 ---
 
